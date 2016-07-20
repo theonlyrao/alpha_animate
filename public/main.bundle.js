@@ -63,17 +63,58 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(
-	  'a',
-	  { href: '#' },
-	  'Capital A'
-	), document.getElementById('buttons'));
+	var ButtonChoices = _react2.default.createClass({
+					displayName: 'ButtonChoices',
+					render: function render() {
+									return _react2.default.createElement(
+													'div',
+													{ id: 'buttons' },
+													_react2.default.createElement(
+																	'div',
+																	{ id: 'button-group' },
+																	_react2.default.createElement(
+																					'div',
+																					{ id: 'capital-button' },
+																					'A'
+																	),
+																	_react2.default.createElement(
+																					'div',
+																					{ id: 'lowercase-button' },
+																					'a'
+																	)
+													)
+									);
+					}
+	});
 
-	_reactDom2.default.render(_react2.default.createElement(
-	  'h1',
-	  null,
-	  'A'
-	), document.getElementById('letters'));
+	var Letter = _react2.default.createClass({
+					displayName: 'Letter',
+					render: function render() {
+									return _react2.default.createElement(
+													'div',
+													null,
+													_react2.default.createElement(
+																	'h1',
+																	null,
+																	'React Capital A'
+													)
+									);
+					}
+	});
+
+	var Alphabet = _react2.default.createClass({
+					displayName: 'Alphabet',
+					render: function render() {
+									return _react2.default.createElement(
+													'div',
+													{ id: 'a' },
+													_react2.default.createElement(ButtonChoices, null),
+													_react2.default.createElement(Letter, null)
+									);
+					}
+	});
+
+	_reactDom2.default.render(_react2.default.createElement(Alphabet, null), document.querySelector('#container'));
 
 /***/ },
 /* 2 */
