@@ -14,6 +14,6 @@ module.exports = {
 	]
     },
     resolve: {
-	extensions: ['', '.js', '.json', '.jsx', '.jade', '.html', '.css'] 
+	extensions: ['', '.js', '.json', '.jsx', '.jade', '.css'] 
     }
 }

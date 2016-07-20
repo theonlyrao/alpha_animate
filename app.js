@@ -11,8 +11,8 @@ var routes = require('./routes/index');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+//app.set('views', path.join(__dirname, 'views'));
+//app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -22,11 +22,16 @@ app.set('view engine', 'jade');
  * app.use(cookieParser());*/
 //app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-/* app.get('/', function (req, res) {
- *     res.render('index.html');
- * });*/
+//app.use('/', routes);
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + '/public/index.html')
+});
 //app.use('/users', users);
+
+app.get('/react', function (req, res) {
+    res.sendFile(__dirname + '/public/main.bundle.js')
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
