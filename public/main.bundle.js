@@ -64,10 +64,16 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_reactDom2.default.render(_react2.default.createElement(
+	  'a',
+	  { href: '#' },
+	  'Capital A'
+	), document.getElementById('buttons'));
+
+	_reactDom2.default.render(_react2.default.createElement(
 	  'h1',
 	  null,
-	  'Hello, World!'
-	), document.getElementById('root'));
+	  'A'
+	), document.getElementById('letters'));
 
 /***/ },
 /* 2 */
