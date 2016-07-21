@@ -92,12 +92,10 @@
 					render: function render() {
 									return _react2.default.createElement(
 													'div',
-													null,
-													_react2.default.createElement(
-																	'h1',
-																	null,
-																	'React Capital A'
-													)
+													{ id: 'a-capital' },
+													_react2.default.createElement('div', { id: 'a-capital-one' }),
+													_react2.default.createElement('div', { id: 'a-capital-two' }),
+													_react2.default.createElement('div', { id: 'a-capital-three' })
 									);
 					}
 	});

@@ -55,6 +55,11 @@ body {
     background: #1B2F33;
 }
 
+h1 {
+    color: white;
+}
+
+
 #container {
     height: 1000px;
     width: 100%;
@@ -95,7 +100,50 @@ body {
     margin-left: 20px;
 }
 
-h1 {
-    color: white;
+#a-capital {
+    width: 100%;
+    height: 500px;
+    margin: 0px auto 0px auto;
 }
 
+#a-capital-one {
+    float: left;
+    margin-left: 500px;
+    margin-top: 100px;
+    width: 0;
+    height: 0;
+    border-top: 180px solid transparent;
+    border-left: 70px solid #28502E;
+    border-bottom: 190px solid transparent;
+    -ms-transform: skewX(-22deg); /* IE 9 */
+    -webkit-transform: skewX(-22deg); /* Safari */
+    transform: skewX(-22deg);
+}
+
+#a-capital-two {
+    float: left;
+    margin-left: 4px;
+    margin-top: 100px;
+    width: 0;
+    height: 0;
+    border-top: 130px solid transparent;
+    border-left: 25px solid #47682C;
+    border-bottom: 57px solid transparent;
+    -ms-transform: skewX(-1deg); /* IE 9 */
+    -webkit-transform: skewX(-1deg); /* Safari */
+    transform: skewX(-1deg);
+}
+
+#a-capital-three {
+    float: left;
+    margin-left: -97px;
+    margin-top: 280px;
+    width: 0;
+    height: 0;
+    border-top: 188px solid transparent;
+    border-left: 40px solid #8C7051;
+    border-bottom: 0px solid transparent;
+    -ms-transform: skewX(-38deg); /* IE 9 */
+    -webkit-transform: skewX(-38deg); /* Safari */
+    transform: skewX(-38deg);
+}

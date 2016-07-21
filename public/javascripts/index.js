@@ -17,8 +17,13 @@ const ButtonChoices = React.createClass({
 const Letter = React.createClass({
     render() {
 	return (
-	    <div>
-	    <h1>React Capital A</h1>
+	    <div id="a-capital">
+	    <div id="a-capital-one">
+	    </div>
+	    <div id="a-capital-two">
+	    </div>
+	    <div id="a-capital-three">
+	    </div>
 	    </div>
 	)
     }
