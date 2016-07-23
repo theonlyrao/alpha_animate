@@ -24,6 +24,20 @@ const Letter = React.createClass({
 	    </div>
 	    <div id="a-capital-three">
 	    </div>
+	    <div id="a-capital-four">
+	    </div>
+	    <div id="a-capital-five">
+	    </div>
+	    <div id="a-capital-six">
+	    </div>
+	    <div id="a-capital-seven">
+	    </div>
+	    <div id="a-capital-eight">
+	    </div>
+	    <div id="a-capital-nine">
+	    </div>
+	    <div id="a-capital-ten">
+	    </div>
 	    </div>
 	)
     }

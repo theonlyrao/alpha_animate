@@ -95,7 +95,14 @@
 													{ id: 'a-capital' },
 													_react2.default.createElement('div', { id: 'a-capital-one' }),
 													_react2.default.createElement('div', { id: 'a-capital-two' }),
-													_react2.default.createElement('div', { id: 'a-capital-three' })
+													_react2.default.createElement('div', { id: 'a-capital-three' }),
+													_react2.default.createElement('div', { id: 'a-capital-four' }),
+													_react2.default.createElement('div', { id: 'a-capital-five' }),
+													_react2.default.createElement('div', { id: 'a-capital-six' }),
+													_react2.default.createElement('div', { id: 'a-capital-seven' }),
+													_react2.default.createElement('div', { id: 'a-capital-eight' }),
+													_react2.default.createElement('div', { id: 'a-capital-nine' }),
+													_react2.default.createElement('div', { id: 'a-capital-ten' })
 									);
 					}
 	});
