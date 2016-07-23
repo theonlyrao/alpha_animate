@@ -1,8 +1,240 @@
+/* Reset css
+
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	      content: '';
+	      content: none;
+	  }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-a {
-  color: #00B7FF;
+/* Begin new styling */
+
+body {
+    background: #1B2F33;
+}
+
+h1 {
+    color: white;
+}
+
+
+#container {
+    width: 100%;
+}
+
+#buttons{
+    color: #;
+    width: auto;
+    height: 50px;
+    padding: 10px;
+    background: #8C7051;
+    border-bottom: 1px solid #EF3054;
+}
+
+#a {
+    width: auto;
+}
+
+#button-group {
+    width: 100px;
+    margin: 0px auto 0px auto;
+}
+
+#capital-button {
+    background: #EF3054;
+    border: 1px solid #1B2F33;
+    color: white;
+    float: left;
+    padding: 10px;
+}
+
+#lowercase-button {
+    background: #EF3054;
+    border: 1px solid #1B2F33;
+    color: white;
+    float: left;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+#a-capital {
+    width: 100%;
+    margin: 0px auto 0px auto;
+}
+
+#a-capital-one {
+    float: left;
+    margin-left: 500px;
+    margin-top: 100px;
+    width: 0;
+    height: 0;
+    border-top: 180px solid transparent;
+    border-left: 70px solid #28502E;
+    border-bottom: 190px solid transparent;
+    -ms-transform: skewX(-22deg); /* IE 9 */
+    -webkit-transform: skewX(-22deg); /* Safari */
+    transform: skewX(-22deg);
+}
+
+#a-capital-two {
+    float: left;
+    margin-left: 3px;
+    margin-top: 98px;
+    width: 0;
+    height: 0;
+    border-top: 130px solid transparent;
+    border-left: 25px solid #47682C;
+    border-bottom: 57px solid transparent;
+    -ms-transform: skewX(-1deg); /* IE 9 */
+    -webkit-transform: skewX(-1deg); /* Safari */
+    transform: skewX(-1deg);
+}
+
+#a-capital-three {
+    float: left;
+    margin-left: -100px;
+    margin-top: 280px;
+    width: 0;
+    height: 0;
+    border-top: 188px solid transparent;
+    border-left: 40px solid #8C7051;
+    border-bottom: 0px solid transparent;
+    -ms-transform: skewX(-38deg); /* IE 9 */
+    -webkit-transform: skewX(-38deg); /* Safari */
+    transform: skewX(-38deg);
+}
+
+#a-capital-four {
+    float: left;
+    margin-left: -12px;
+    margin-top: 100px;
+    width: 10px;
+    height: 130px;
+    border-top: 0px solid transparent;
+    border-left: 50px solid #28502E;
+    border-bottom: 0px solid transparent;
+    -ms-transform: skewX(10deg); /* IE 9 */
+    -webkit-transform: skewX(10deg); /* Safari */
+    transform: skewX(10deg);
+}
+
+#a-capital-five {
+    float: left;
+    margin-left: -6px;
+    margin-top: 100px;
+    width: 20px;
+    height: 50px;
+    border-left: 0px solid transparent;
+    border-top: 129px solid #8C7051;
+    border-right: 50px solid transparent;
+    -ms-transform: skewX(10deg); /* IE 9 */
+    -webkit-transform: skewX(10deg); /* Safari */
+    transform: skewX(10deg);
+}
+
+#a-capital-six {
+    float: left;
+    margin-left: -29px;
+    margin-top: 99px;
+    width: 0px;
+    height: 0px;
+    border-left: 0px solid transparent;
+    border-bottom: 129px solid #47682C;
+    border-right: 50px solid transparent;
+    -ms-transform: skewX(-12deg); /* IE 9 */
+    -webkit-transform: skewX(-12deg); /* Safari */
+    transform: skewX(-12deg);
+}
+
+#a-capital-seven {
+    float: left;
+    margin-left: -108px;
+    margin-top: 225px;
+    width: 11px;
+    height: 0px;
+    border-left: 70px solid transparent;
+    border-top: 129px solid #28502E;
+    border-right: 0px solid transparent;
+    -ms-transform: skewX(-12deg); /* IE 9 */
+    -webkit-transform: skewX(-12deg); /* Safari */
+    transform: skewX(-12deg);
+}
+
+#a-capital-eight {
+    float: left;
+    margin-left: -54px;
+    margin-top: 226px;
+    width: 0px;
+    height: 0px;
+    border-left: 44px solid transparent;
+    border-bottom: 129px solid #8C7051;
+    border-right: 0px solid transparent;
+    -ms-transform: skewX(3deg); /* IE 9 */
+    -webkit-transform: skewX(3deg); /* Safari */
+    transform: skewX(3deg);
+}
+
+#a-capital-nine {
+    float: left;
+    margin-left: -42px;
+    margin-top: 350px;
+    width: 46px;
+    height: 118px;
+    -webkit-transform: skew(10deg);
+    -moz-transform: skew(10deg);
+    -o-transform: skew(10deg);
+    background: #47682C;
+}
+
+#a-capital-ten {
+    float: left;
+    margin-left: -215px;
+    margin-top: 283px;
+    height: 0;
+    width: 89px;
+    border-bottom: 54px solid #47682C;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
 }

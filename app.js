@@ -11,6 +11,9 @@ app.get('/react', function (req, res) {
     res.sendFile(__dirname + '/public/main.bundle.js')
 });
 
+app.get('/stylesheet', function (req, res) {
+    res.sendFile(__dirname + '/public/stylesheets/style.css')
+});
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
