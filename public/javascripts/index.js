@@ -1,19 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const ButtonChoices = React.createClass({
-    render() {
-	return (
-	    <div id="buttons">
-	    <div id="button-group">
-	    <div id="capital-button">A</div>
-	    <div id="lowercase-button">a</div>
-	    </div>
-	    </div>
-	)
-    }
-})
-
 const Letter = React.createClass({
     render() {
 	return (
@@ -41,17 +28,39 @@ const Letter = React.createClass({
 	    </div>
 	)
     }
-})
-
-const Alphabet = React.createClass({
-    render() {
-	return (
-	    <div id="a">
-	    <ButtonChoices />
-	    <Letter />
-	    </div>
-	);
-    },
 });
 
-ReactDOM.render(<Alphabet />, document.querySelector('#container'));
+var CapitalAButton = React.createClass({
+    showCapitalA: function(){
+	ReactDOM.render(<Letter />, document.querySelector("#letter"))
+    },
+    
+    render: function() {
+	return (
+	    <div id="capital-button" onClick={this.showCapitalA}>
+	    A
+	    </div>
+	)
+    }
+
+});
+
+var ButtonChoices = React.createClass({
+    render: function() {
+	return (
+	    <div id="buttons">
+	    <div id="button-group">
+	    <CapitalAButton />
+	    </div>
+	    </div>
+	)
+    }
+});
+
+
+ReactDOM.render(
+    <div id="a">
+    <ButtonChoices />
+    </div>,
+    document.querySelector('#container')
+);
