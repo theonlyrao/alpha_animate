@@ -83,12 +83,26 @@
 					}
 	});
 
+	var CapitalAButton = _react2.default.createClass({
+					displayName: 'CapitalAButton',
+
+					showCapitalA: function showCapitalA() {
+									_reactDom2.default.render(_react2.default.createElement(Letter, null), document.querySelector("#letter"));
+					},
+
+					render: function render() {
+									return _react2.default.createElement(
+													'div',
+													{ id: 'capital-button', onClick: this.showCapitalA },
+													'A'
+									);
+					}
+
+	});
+
 	var ButtonChoices = _react2.default.createClass({
 					displayName: 'ButtonChoices',
-					showCapitalA: function showCapitalA() {
-									console.log("in show");
-									return _react2.default.createElement(Letter, null);
-					},
+
 					render: function render() {
 									return _react2.default.createElement(
 													'div',
@@ -96,16 +110,7 @@
 													_react2.default.createElement(
 																	'div',
 																	{ id: 'button-group' },
-																	_react2.default.createElement(
-																					'div',
-																					{ id: 'capital-button', onClick: this.showCapitalA },
-																					'A'
-																	),
-																	_react2.default.createElement(
-																					'div',
-																					{ id: 'lowercase-button' },
-																					'a'
-																	)
+																	_react2.default.createElement(CapitalAButton, null)
 													)
 									);
 					}

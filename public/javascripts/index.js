@@ -28,25 +28,35 @@ const Letter = React.createClass({
 	    </div>
 	)
     }
-})
+});
 
-const ButtonChoices = React.createClass({
-    showCapitalA() {
-	console.log("in show")
-	return <Letter />
+var CapitalAButton = React.createClass({
+    showCapitalA: function(){
+	ReactDOM.render(<Letter />, document.querySelector("#letter"))
     },
     
-    render() {
+    render: function() {
+	return (
+	    <div id="capital-button" onClick={this.showCapitalA}>
+	    A
+	    </div>
+	)
+    }
+
+});
+
+var ButtonChoices = React.createClass({
+    render: function() {
 	return (
 	    <div id="buttons">
 	    <div id="button-group">
-	    <div id="capital-button" onClick={this.showCapitalA}>A</div>
-	    <div id="lowercase-button">a</div>
+	    <CapitalAButton />
 	    </div>
 	    </div>
 	)
     }
-})
+});
+
 
 ReactDOM.render(
     <div id="a">
