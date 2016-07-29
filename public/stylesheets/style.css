@@ -88,6 +88,7 @@ h1 {
     color: white;
     float: left;
     padding: 10px;
+    cursor: pointer;
 }
 
 #lowercase-button {
