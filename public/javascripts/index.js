@@ -35,19 +35,20 @@ var CapitalAButton = React.createClass({
 	return { showCapitalA: false  };
     },
 
-    showCapitalA: function(){
-	this.setState({
-	    showCapitalA: true
-	});
+    componentDidUpdate: function(prevProps, prevState){
+	prevState.showCapitalA? ReactDOM.unmountComponentAtNode(document.querySelector("#letter")) : ReactDOM.render(<Letter />, document.querySelector('#letter'));
     },
+
+    toggleCapitalA: function(){
+	this.state.showCapitalA? this.setState({showCapitalA: false}) : this.setState({showCapitalA: true})
+    },
+    
     
     render: function() {
 	return (
-	    <div id="capital-button" onClick={this.showCapitalA}>
+	    <div id="capital-button" onClick={this.toggleCapitalA}>
 	    A
-	    { this.state.showCapitalA? ReactDOM.render(<Letter />, document.querySelector('#letter')) : null }	    
 	    </div>
-
 	)
     }
 

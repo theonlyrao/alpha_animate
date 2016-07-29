@@ -90,18 +90,19 @@
 							return { showCapitalA: false };
 				},
 
-				showCapitalA: function showCapitalA() {
-							this.setState({
-										showCapitalA: true
-							});
+				componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
+							prevState.showCapitalA ? _reactDom2.default.unmountComponentAtNode(document.querySelector("#letter")) : _reactDom2.default.render(_react2.default.createElement(Letter, null), document.querySelector('#letter'));
+				},
+
+				toggleCapitalA: function toggleCapitalA() {
+							this.state.showCapitalA ? this.setState({ showCapitalA: false }) : this.setState({ showCapitalA: true });
 				},
 
 				render: function render() {
 							return _react2.default.createElement(
 										'div',
-										{ id: 'capital-button', onClick: this.showCapitalA },
-										'A',
-										this.state.showCapitalA ? _reactDom2.default.render(_react2.default.createElement(Letter, null), document.querySelector('#letter')) : null
+										{ id: 'capital-button', onClick: this.toggleCapitalA },
+										'A'
 							);
 				}
 
