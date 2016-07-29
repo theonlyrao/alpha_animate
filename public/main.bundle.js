@@ -64,63 +64,62 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Letter = _react2.default.createClass({
-					displayName: 'Letter',
-					render: function render() {
-									return _react2.default.createElement(
-													'div',
-													{ id: 'a-capital' },
-													_react2.default.createElement('div', { id: 'a-capital-one' }),
-													_react2.default.createElement('div', { id: 'a-capital-two' }),
-													_react2.default.createElement('div', { id: 'a-capital-three' }),
-													_react2.default.createElement('div', { id: 'a-capital-four' }),
-													_react2.default.createElement('div', { id: 'a-capital-five' }),
-													_react2.default.createElement('div', { id: 'a-capital-six' }),
-													_react2.default.createElement('div', { id: 'a-capital-seven' }),
-													_react2.default.createElement('div', { id: 'a-capital-eight' }),
-													_react2.default.createElement('div', { id: 'a-capital-nine' }),
-													_react2.default.createElement('div', { id: 'a-capital-ten' })
-									);
-					}
+				displayName: 'Letter',
+				render: function render() {
+							return _react2.default.createElement(
+										'div',
+										{ id: 'a-capital' },
+										_react2.default.createElement('div', { id: 'a-capital-one' }),
+										_react2.default.createElement('div', { id: 'a-capital-two' }),
+										_react2.default.createElement('div', { id: 'a-capital-three' }),
+										_react2.default.createElement('div', { id: 'a-capital-four' }),
+										_react2.default.createElement('div', { id: 'a-capital-five' }),
+										_react2.default.createElement('div', { id: 'a-capital-six' }),
+										_react2.default.createElement('div', { id: 'a-capital-seven' }),
+										_react2.default.createElement('div', { id: 'a-capital-eight' }),
+										_react2.default.createElement('div', { id: 'a-capital-nine' }),
+										_react2.default.createElement('div', { id: 'a-capital-ten' })
+							);
+				}
 	});
 
 	var CapitalAButton = _react2.default.createClass({
-					displayName: 'CapitalAButton',
+				displayName: 'CapitalAButton',
 
-					showCapitalA: function showCapitalA() {
-									_reactDom2.default.render(_react2.default.createElement(Letter, null), document.querySelector("#letter"));
-					},
+				getInitialState: function getInitialState() {
+							return { showCapitalA: false };
+				},
 
-					render: function render() {
-									return _react2.default.createElement(
-													'div',
-													{ id: 'capital-button', onClick: this.showCapitalA },
-													'A'
-									);
-					}
+				showCapitalA: function showCapitalA() {
+							this.setState({
+										showCapitalA: true
+							});
+				},
+
+				render: function render() {
+							return _react2.default.createElement(
+										'div',
+										{ id: 'capital-button', onClick: this.showCapitalA },
+										'A',
+										this.state.showCapitalA ? _reactDom2.default.render(_react2.default.createElement(Letter, null), document.querySelector('#letter')) : null
+							);
+				}
 
 	});
 
 	var ButtonChoices = _react2.default.createClass({
-					displayName: 'ButtonChoices',
+				displayName: 'ButtonChoices',
 
-					render: function render() {
-									return _react2.default.createElement(
-													'div',
-													{ id: 'buttons' },
-													_react2.default.createElement(
-																	'div',
-																	{ id: 'button-group' },
-																	_react2.default.createElement(CapitalAButton, null)
-													)
-									);
-					}
+				render: function render() {
+							return _react2.default.createElement(CapitalAButton, null);
+				}
 	});
 
 	_reactDom2.default.render(_react2.default.createElement(
-					'div',
-					{ id: 'a' },
-					_react2.default.createElement(ButtonChoices, null)
-	), document.querySelector('#container'));
+				'div',
+				{ id: 'a' },
+				_react2.default.createElement(ButtonChoices, null)
+	), document.querySelector('#button-group'));
 
 /***/ },
 /* 2 */

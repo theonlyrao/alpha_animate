@@ -31,15 +31,23 @@ const Letter = React.createClass({
 });
 
 var CapitalAButton = React.createClass({
+    getInitialState: function(){
+	return { showCapitalA: false  };
+    },
+
     showCapitalA: function(){
-	ReactDOM.render(<Letter />, document.querySelector("#letter"))
+	this.setState({
+	    showCapitalA: true
+	});
     },
     
     render: function() {
 	return (
 	    <div id="capital-button" onClick={this.showCapitalA}>
 	    A
+	    { this.state.showCapitalA? ReactDOM.render(<Letter />, document.querySelector('#letter')) : null }	    
 	    </div>
+
 	)
     }
 
@@ -48,11 +56,7 @@ var CapitalAButton = React.createClass({
 var ButtonChoices = React.createClass({
     render: function() {
 	return (
-	    <div id="buttons">
-	    <div id="button-group">
 	    <CapitalAButton />
-	    </div>
-	    </div>
 	)
     }
 });
@@ -62,5 +66,5 @@ ReactDOM.render(
     <div id="a">
     <ButtonChoices />
     </div>,
-    document.querySelector('#container')
+    document.querySelector('#button-group')
 );
